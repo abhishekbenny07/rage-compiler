@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RageCompile — Code, Run, Regret</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="titlebar">
+      <div class="traffic-lights"><i></i><i></i><i></i></div>
+      <div class="brand"><span class="brand-mark">&lt;/&gt;</span> RageCompile</div>
+      <div class="title">main.c — ragecompile</div>
+    </header>
 
+    <div class="workspace">
+      <aside class="activity-bar" aria-label="Tools">
+        <button class="active" data-action="Explorer" title="Explorer">▣</button><button data-action="Search" title="Search">⌕</button><button data-action="Source Control" title="Source control">⑂</button><button data-action="Extensions" title="Extensions">▦</button>
+        <button class="bottom" data-action="Settings" title="Settings">⚙</button>
+      </aside>
+
+      <aside class="explorer">
+        <p class="panel-heading">EXPLORER</p>
+        <div class="project"><span>⌄</span> RAGE-PROJECT</div>
+        <div class="file active-file" data-file="main.c"><span class="c-icon">C</span> main.c</div>
+        <div class="file" data-file="compiler.conf"><span class="file-icon">#</span> compiler.conf</div>
+        <div class="file" data-file="README.md"><span class="file-icon">ⓘ</span> README.md</div>
+      </aside>
+
+      <main class="editor-area">
+        <div class="tabs"><div class="tab"><span class="c-icon">C</span> main.c <button id="closeTab">×</button></div></div>
+        <div class="editor-toolbar">
+          <span>C</span><span class="dot">●</span><span>Local C compiler demo</span>
+          <label class="example-picker">Example <select id="exampleSelect" aria-label="Choose a C example">
+            <option value="hello">Hello world</option>
+            <option value="loop">For loop</option>
+            <option value="calculator">Calculator</option>
+            <option value="condition">If / else</option>
+            <option value="error">Error demo</option>
+          </select></label>
+          <button id="runButton" class="run-button">▶ Run Code</button>
+        </div>
+        <div class="code-wrap">
+          <pre id="lineNumbers" aria-hidden="true">1</pre>
+          <textarea id="code" spellcheck="false" aria-label="C code editor">#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello, hackathon hero!\\n");
+  printf("My useless compiler is working.\\n");
+  return 0;
+}</textarea>
+        </div>
+      </main>
+    </div>
+
+    <section class="terminal">
+      <div class="terminal-tabs"><button class="selected">PROBLEMS</button><button>OUTPUT</button><button>DEBUG CONSOLE</button><button>TERMINAL</button><span id="statusLight">● Ready to judge</span></div>
+      <div id="memeCard" class="meme-card neutral">
+        <span class="robot">⌘</span><div><p id="memeLabel" class="meme-label">COMPILER STATUS</p><p id="memeText">Ready to run JavaScript.</p></div>
+      </div>
+      <pre id="output" class="output" hidden></pre>
+    </section>
+
+    <footer><span><b>main.c</b> &nbsp; C</span><span>Ln <b id="cursorLine">1</b>, Col <b id="cursorCol">1</b></span><span>☻ Rage mode: <b id="mode">medium</b></span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
