@@ -2,34 +2,36 @@
 
 
 
-# [Project Name] 🎯
+# RAGE-COMPILER 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
-
+### Team Name: EXPIDENZ
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: ABHISHEK BENNY - CARMEL COLLEGE OF ENGINEERING AND TECHNOLOGY
+- Member 2: AKERSH BENNY -  CARMEL COLLEGE OF ENGINEERING AND TECHNOLOGY
 
 ### Project Description
-[2-3 lines about what your project does]
+RageCompile is a lightweight, web-based C editor and mock compiler interface styled like a modern IDE. Instead of acting as a traditional development environment, it provides an intentionally sarcastic user experience that pairs simulated compilation with custom witty roasts.  
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Developers are far too comfortable with compilers that quietly output errors or execute code without expressing deep, emotional disappointment. Modern programming environments lack passive-aggressive feedback, leaving coders completely unaware of how deeply their semicolons, logic loops, and formatting choices upset the underlying computer architecture.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+A C-like browser compiler that delivers immediate emotional damage alongside code execution. Whether your program compiles cleanly or breaks on line 4, RageCompile displays custom roasts, flags syntax issues aggressively, and makes you second-guess your career choices in real time.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+Frontend Framework: Vanilla JavaScript (ES6+), HTML5, CSS3
+Fonts: DM Mono (for code and editor elements) and Inter (for structural UI)
+C Simulation & Parsing Engine: A JavaScript-based regex engine (compileC()) that checks for:
+  Proper #include <stdio.h> directives  
+  int main() entry point structure  
+  Matching curly braces {} 
+  Semicolon validation on printf statements  
+  Extraction and execution of formatted printf outputs  UI Components: Interactive activity bar, file navigation sidebar, multi-tab terminal, dynamic line numbers, cursor position tracking (line/column), and a mode switcher  
 
 For Hardware:
 - [List main components]
@@ -39,10 +41,11 @@ For Hardware:
 ### Implementation
 For Software:
 # Installation
-[commands]
+mkdir ragecompile
+cd ragecompile
 
 # Run
-[commands]
+Start-Process index.html
 
 ### Project Documentation
 For Software:
